@@ -6,212 +6,280 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Foxy Green Home Services | Concept by Sticky Mule</title>
 <meta name="description" content="A website concept for Foxy Green Home Services, built on spec by Sticky Mule of Columbia, Tennessee.">
+<meta name="theme-color" content="#1F3A17">
 <link rel="icon" href="assets/fox-mark.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&family=Oswald:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Oswald:wght@600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --green:#5CA83C; --green-ink:#3E7F25; --forest:#1F3A17; --forest-2:#16290f;
+  --green:#5CA83C; --green-ink:#3E7F25; --green-pale:#EEF6E8; --forest:#1F3A17; --forest-2:#16290f; --leaf:#BFE3A9;
   --plum:#5B2D73; --plum-soft:#EFE7F3;
-  --paper:#FAF8F3; --card:#FFFFFF; --ink:#1C211B; --muted:#5B6358; --line:#E3DED3;
-  --sm-ink:#1F1B17; --sm-cream:#F3EBDD; --sm-orange:#D2601A; --sm-brown:#8A5A33;
+  --paper:#FAF8F3; --card:#FFFFFF; --ink:#1C211B; --muted:#58614F; --line:#E3DED3;
+  --sm-ink:#1F1B17; --sm-cream:#F3EBDD; --sm-orange:#D2601A;
   --display:"Cinzel", "Trajan Pro", Georgia, serif;
-  --body:"Source Sans 3", system-ui, -apple-system, Segoe UI, sans-serif;
+  --body:"Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --radius:16px;
+  --shadow:0 30px 60px -32px rgba(31,58,23,.45);
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 img{max-width:100%;display:block}
 a{color:inherit}
-.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+:focus-visible{outline:3px solid var(--plum);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
 /* ---------- Sticky Mule pitch frame ---------- */
-.sm-bar{background:var(--sm-ink);color:var(--sm-cream);font-size:14px;letter-spacing:.02em}
+.sm-bar{background:var(--sm-ink);color:var(--sm-cream);font-size:14px}
 .sm-bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:46px;flex-wrap:wrap;padding-top:6px;padding-bottom:6px}
 .sm-word{font-family:"Oswald",Impact,sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.08em;text-decoration:none;font-size:16px}
 .sm-word span{color:var(--sm-orange)}
 .sm-tag{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(243,235,221,.3);border-radius:999px;padding:3px 12px;font-size:12.5px;text-transform:uppercase;letter-spacing:.08em}
-.sm-tag i{width:7px;height:7px;border-radius:50%;background:var(--sm-orange);display:inline-block}
+.sm-tag i,.concept i{width:7px;height:7px;border-radius:50%;background:var(--sm-orange);display:inline-block;flex:none}
+.concept{display:inline-flex;align-items:center;gap:10px;background:var(--sm-ink);color:var(--sm-cream);border-radius:999px;padding:7px 16px;font-size:13.5px;line-height:1.35}
+.concept b{font-family:"Oswald",Impact,sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.08em;font-size:12px;color:#fff}
 
-/* ---------- Site nav ---------- */
-.nav{position:sticky;top:0;z-index:20;background:rgba(250,248,243,.94);backdrop-filter:saturate(1.2) blur(8px);-webkit-backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid var(--line)}
+/* ---------- Nav ---------- */
+.nav{position:sticky;top:0;z-index:40;background:rgba(250,248,243,.94);backdrop-filter:saturate(1.2) blur(10px);-webkit-backdrop-filter:saturate(1.2) blur(10px);border-bottom:1px solid var(--line)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:74px;gap:16px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
 .brand img{height:44px;width:auto}
 .brand b{font-family:var(--display);font-weight:600;font-size:22px;letter-spacing:.06em;color:var(--green-ink);line-height:1}
 .brand small{display:block;font-family:var(--display);font-size:10.5px;letter-spacing:.24em;color:var(--muted);margin-top:4px}
 .nav-links{display:flex;gap:26px;font-weight:500;font-size:16px}
-.nav-links a{text-decoration:none;color:var(--muted)}
-.nav-links a:hover{color:var(--ink)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:700;text-decoration:none;border-radius:10px;padding:14px 22px;font-size:17px;transition:transform .15s ease, background .15s ease, box-shadow .15s ease;white-space:nowrap}
+.nav-links a{text-decoration:none;color:var(--muted);padding:6px 0;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
+.nav-links a:hover{color:var(--ink);border-color:var(--green)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--body);font-weight:700;text-decoration:none;border-radius:10px;padding:14px 22px;font-size:17px;line-height:1.2;transition:transform .15s ease,background .15s ease,box-shadow .15s ease,color .15s ease;white-space:nowrap;border:0;cursor:pointer}
 .btn svg{width:18px;height:18px;flex:none}
-.btn-green{background:var(--green);color:#fff;box-shadow:0 6px 18px -8px rgba(62,127,37,.7)}
-.btn-green:hover{background:var(--green-ink);transform:translateY(-1px)}
-.btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.btn-green{background:var(--green-ink);color:#fff;box-shadow:0 8px 20px -10px rgba(62,127,37,.8)}
+.btn-green:hover{background:#336b1e;transform:translateY(-1px)}
+.btn-ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
 .btn-ghost:hover{background:var(--ink);color:#fff}
 .btn-white{background:#fff;color:var(--forest)}
 .btn-white:hover{transform:translateY(-1px)}
-.btn-line{border:1.5px solid rgba(255,255,255,.6);color:#fff}
+.btn-line{color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.6)}
 .btn-line:hover{background:rgba(255,255,255,.1)}
 .nav .btn{padding:11px 16px;font-size:15.5px}
 
 /* ---------- Hero ---------- */
-.hero{position:relative;overflow:hidden;padding:72px 0 84px}
-.hero::before{content:"";position:absolute;inset:0;background:
-  radial-gradient(900px 500px at 85% 10%, rgba(92,168,60,.10), transparent 60%),
-  radial-gradient(700px 400px at 0% 100%, rgba(91,45,115,.06), transparent 60%);pointer-events:none}
-.hero .wrap{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.hero{position:relative;overflow:hidden;padding:64px 0 88px}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(900px 520px at 88% 0%,rgba(92,168,60,.13),transparent 60%),radial-gradient(700px 420px at 0% 100%,rgba(91,45,115,.06),transparent 60%);pointer-events:none}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center}
 .eyebrow{display:inline-flex;align-items:center;gap:12px;font-family:var(--display);font-size:13px;letter-spacing:.26em;color:var(--plum);text-transform:uppercase;font-weight:600}
-.eyebrow::before{content:"";width:34px;height:2px;background:var(--plum)}
+.eyebrow::before{content:"";width:34px;height:2px;background:currentColor}
 h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.08;margin:0;letter-spacing:.01em}
-h1{font-size:clamp(38px,5.6vw,66px);margin:18px 0 22px;color:var(--ink)}
+h1{font-size:clamp(38px,5.4vw,64px);margin:18px 0 22px}
 h1 em{font-style:normal;color:var(--green-ink)}
 .lede{font-size:20.5px;color:var(--muted);max-width:560px;margin:0 0 30px}
 .cta-row{display:flex;gap:12px;flex-wrap:wrap}
-.hero-note{margin-top:18px;font-size:15px;color:var(--muted)}
+.hero-note{margin:18px 0 0;font-size:15.5px;color:var(--muted)}
 .hero-note b{color:var(--ink)}
-.hero-art{position:relative;justify-self:center;width:100%;max-width:420px}
-.hero-card{position:relative;background:#fff;border-radius:22px;padding:42px 34px 30px;box-shadow:0 40px 80px -40px rgba(31,58,23,.45),0 2px 0 var(--line);text-align:center;transform:rotate(-2.2deg)}
-.hero-card::after{content:"";position:absolute;inset:-10px -12px auto auto;width:100%;height:100%;border-radius:22px;border:2px solid var(--green);opacity:.35;z-index:-1;transform:rotate(4deg)}
-.hero-card img{width:58%;margin:0 auto 16px}
-.hero-card .wm{font-family:var(--display);font-size:32px;font-weight:600;color:var(--green);letter-spacing:.05em}
-.hero-card .rule{display:flex;align-items:center;gap:12px;margin:10px 0}
-.hero-card .rule::before,.hero-card .rule::after{content:"";flex:1;height:2px;background:var(--plum)}
-.hero-card .rule span{font-family:var(--display);font-size:12.5px;letter-spacing:.3em;color:var(--green-ink)}
-.hero-card .phone{font-weight:700;font-size:20px;margin-top:12px;letter-spacing:.02em}
-.stamp{position:absolute;right:-14px;bottom:-22px;background:var(--plum);color:#fff;border-radius:50%;width:124px;height:124px;display:grid;place-items:center;text-align:center;font-family:var(--display);font-size:11px;letter-spacing:.08em;line-height:1.35;transform:rotate(10deg);box-shadow:0 14px 30px -12px rgba(91,45,115,.7)}
-.stamp b{display:block;font-size:26px;letter-spacing:0}
+.hero-art{position:relative;justify-self:end;width:100%;max-width:470px;margin-bottom:30px}
+.hero-photo{position:relative;border-radius:22px;overflow:hidden;box-shadow:var(--shadow);aspect-ratio:920/1069;background:#ddd}
+.hero-photo img{width:100%;height:100%;object-fit:cover}
+.pill-tag{position:absolute;top:14px;left:14px;background:rgba(28,33,27,.78);color:#fff;font-weight:700;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;border-radius:999px;padding:6px 12px;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
+.hero-before{position:absolute;left:-34px;bottom:-30px;width:46%;background:#fff;padding:7px 7px 30px;border-radius:10px;box-shadow:0 24px 40px -18px rgba(0,0,0,.45);transform:rotate(-4deg)}
+.hero-before img{border-radius:5px;aspect-ratio:4/3;object-fit:cover;width:100%}
+.hero-before span{position:absolute;left:0;right:0;bottom:6px;text-align:center;font-family:var(--display);font-weight:600;font-size:13px;letter-spacing:.2em;color:var(--muted)}
+.stamp{position:absolute;right:-18px;top:-22px;background:var(--plum);color:#fff;border-radius:50%;width:118px;height:118px;display:grid;place-items:center;text-align:center;font-family:var(--display);font-size:10.5px;letter-spacing:.08em;line-height:1.35;transform:rotate(9deg);box-shadow:0 14px 30px -12px rgba(91,45,115,.7)}
+.stamp b{display:block;font-size:25px;letter-spacing:0}
+.hero-link{position:absolute;right:0;bottom:-34px;font-weight:700;font-size:15.5px;color:var(--green-ink);text-decoration:none;display:inline-flex;gap:6px;align-items:center}
+.hero-link:hover{text-decoration:underline}
 
 /* ---------- Proof strip ---------- */
 .proof{background:var(--forest);color:#fff;position:relative}
-.proof::before{content:"";position:absolute;inset:0;opacity:.18;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");pointer-events:none}
+.grain::before{content:"";position:absolute;inset:0;opacity:.16;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");pointer-events:none}
 .proof .wrap{position:relative;display:grid;grid-template-columns:repeat(4,1fr)}
 .stat{padding:30px 22px;border-left:1px solid rgba(255,255,255,.14)}
-.stat:first-child{border-left:0}
-.stat b{display:block;font-family:var(--display);font-size:34px;font-weight:600;line-height:1.1;color:#BFE3A9}
-.stat span{font-size:15.5px;color:rgba(255,255,255,.82)}
+.stat:first-child{border-left:0;padding-left:0}
+.stat b{display:block;font-family:var(--display);font-size:34px;font-weight:600;line-height:1.1;color:var(--leaf)}
+.stat span{font-size:15.5px;color:rgba(255,255,255,.84)}
 
 /* ---------- Sections ---------- */
-section{padding:96px 0}
-.sec-head{max-width:720px;margin-bottom:46px}
+section{padding:100px 0}
+.sec-head{max-width:740px;margin-bottom:46px}
 .sec-head h2{font-size:clamp(32px,4.2vw,50px);margin-top:14px}
 .sec-head p{color:var(--muted);font-size:19.5px;margin:16px 0 0}
+.sec-row{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:40px}
+.sec-row .sec-head{margin-bottom:0}
 
+/* ---------- Before / after gallery ---------- */
+.work{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.project{margin:0}
+.project.featured{grid-column:1/-1}
+.ba{--pos:50%;position:relative;overflow:hidden;border-radius:var(--radius);aspect-ratio:4/3;background:#e9e6df;cursor:ew-resize;touch-action:pan-y;user-select:none;-webkit-user-select:none;box-shadow:0 20px 40px -30px rgba(0,0,0,.5)}
+.featured .ba{aspect-ratio:16/9}
+.ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.ba .ba-before{clip-path:inset(0 calc(100% - var(--pos)) 0 0)}
+.ba-line{position:absolute;top:0;bottom:0;left:var(--pos);width:3px;margin-left:-1.5px;background:#fff;box-shadow:0 0 0 1px rgba(0,0,0,.08),0 0 18px rgba(0,0,0,.25);pointer-events:none}
+.ba-knob{position:absolute;top:50%;left:var(--pos);width:52px;height:52px;margin:-26px 0 0 -26px;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 8px 22px -6px rgba(0,0,0,.45);pointer-events:none;transition:transform .15s ease}
+.ba-knob svg{width:26px;height:26px;stroke:var(--green-ink);fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.ba.is-drag .ba-knob,.ba:hover .ba-knob{transform:scale(1.08)}
+.ba-label{position:absolute;top:14px;background:rgba(28,33,27,.72);color:#fff;font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;border-radius:999px;padding:6px 12px;pointer-events:none;transition:opacity .2s ease;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
+.ba-label.b{left:14px}
+.ba-label.a{right:14px;background:rgba(62,127,37,.88)}
+.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;margin:0;pointer-events:none}
+.ba:focus-within{outline:3px solid var(--plum);outline-offset:4px}
+.ba-hint{position:absolute;left:50%;bottom:16px;transform:translateX(-50%);background:rgba(255,255,255,.92);color:var(--ink);font-size:13.5px;font-weight:600;border-radius:999px;padding:6px 14px;pointer-events:none;transition:opacity .3s ease;white-space:nowrap}
+.ba.touched .ba-hint{opacity:0}
+.project figcaption{display:flex;flex-direction:column;gap:2px;padding:14px 4px 0}
+.project figcaption b{font-family:var(--display);font-size:19px;font-weight:600}
+.project figcaption span{color:var(--muted);font-size:15.5px}
+.gallery-foot{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-top:34px}
+.gallery-foot a{font-weight:700;color:var(--green-ink)}
+
+/* ---------- Services ---------- */
 .services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.svc{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px 26px 26px;transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease}
+.svc{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px 26px;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
 .svc:hover{transform:translateY(-3px);box-shadow:0 24px 40px -28px rgba(31,58,23,.4);border-color:#cfe2c3}
-.svc .ico{width:48px;height:48px;border-radius:12px;background:#EEF6E8;display:grid;place-items:center;margin-bottom:18px}
+.svc .ico{width:48px;height:48px;border-radius:12px;background:var(--green-pale);display:grid;place-items:center;margin-bottom:18px}
 .svc .ico svg{width:26px;height:26px;stroke:var(--green-ink);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.svc h3{font-size:21px;margin-bottom:8px}
+.svc h3{font-size:20px;margin-bottom:8px}
 .svc p{margin:0;color:var(--muted);font-size:16.5px}
 .svc-foot{margin-top:26px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;color:var(--muted);font-size:16.5px}
-.pill{display:inline-block;background:var(--plum-soft);color:var(--plum);font-weight:700;border-radius:999px;padding:5px 14px;font-size:14px;letter-spacing:.02em}
+.pill{display:inline-block;background:var(--plum-soft);color:var(--plum);font-weight:700;border-radius:999px;padding:5px 14px;font-size:14px}
 
-/* ---------- Owner / early ---------- */
+/* ---------- About ---------- */
 .early{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.early .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:center}
-.portrait{position:relative;max-width:400px;justify-self:center}
-.portrait img{border-radius:50%;aspect-ratio:1/1;object-fit:cover;width:100%;border:8px solid #fff;box-shadow:0 0 0 2px var(--green),0 30px 60px -30px rgba(0,0,0,.45)}
-.portrait figcaption{position:absolute;left:50%;bottom:-16px;transform:translateX(-50%);background:var(--ink);color:#fff;border-radius:999px;padding:8px 18px;font-size:14px;white-space:nowrap}
+.early .wrap{display:grid;grid-template-columns:.75fr 1.25fr;gap:72px;align-items:center}
+.portrait{position:relative;max-width:340px;justify-self:center;margin:0}
+.portrait img{border-radius:50%;aspect-ratio:1/1;object-fit:cover;width:100%;border:8px solid #fff;box-shadow:0 0 0 2px var(--green),var(--shadow)}
+.portrait figcaption{position:absolute;left:50%;bottom:-14px;transform:translateX(-50%);background:var(--ink);color:#fff;border-radius:999px;padding:8px 18px;font-size:14px;white-space:nowrap}
 .early .big-quote{font-family:var(--display);font-size:clamp(30px,3.8vw,46px);line-height:1.15;color:var(--green-ink);margin:16px 0 22px;max-width:none}
-.early p{color:var(--muted);font-size:19px;margin:0 0 16px;max-width:600px}
+.early p{color:var(--muted);font-size:19px;margin:0 0 16px;max-width:620px}
 .early p b{color:var(--ink)}
-.checks{list-style:none;padding:0;margin:24px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:10px 22px;max-width:600px}
+.checks{list-style:none;padding:0;margin:26px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:10px 22px;max-width:560px}
 .checks li{display:flex;gap:10px;align-items:flex-start;font-weight:600;font-size:16.5px}
-.checks li::before{content:"";flex:none;width:20px;height:20px;margin-top:3px;border-radius:50%;background:var(--green) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3.2 3L15 7' stroke='white' stroke-width='2.2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/100% no-repeat}
+.checks li::before{content:"";flex:none;width:20px;height:20px;margin-top:3px;border-radius:50%;background:var(--green-ink) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3.2 3L15 7' stroke='white' stroke-width='2.2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/100% no-repeat}
 
 /* ---------- Process ---------- */
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:s;border-top:2px solid var(--plum)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);counter-reset:s;border-top:2px solid var(--plum);margin:0;padding:0;list-style:none}
 .step{padding:28px 24px 0 0;position:relative}
 .step::before{counter-increment:s;content:"0" counter(s);font-family:var(--display);font-weight:700;font-size:15px;letter-spacing:.2em;color:var(--plum);display:block;margin-bottom:12px}
 .step::after{content:"";position:absolute;top:-7px;left:0;width:12px;height:12px;border-radius:50%;background:var(--plum)}
-.step h3{font-size:22px;margin-bottom:8px}
+.step h3{font-size:21px;margin-bottom:8px}
 .step p{margin:0;color:var(--muted);font-size:16.5px}
 
 /* ---------- Reviews ---------- */
 .reviews{background:var(--forest);color:#fff;position:relative;overflow:hidden}
-.reviews::before{content:"";position:absolute;right:-80px;top:-60px;width:420px;height:520px;background:url("assets/fox-mark-white.png") center/contain no-repeat;opacity:.06}
-.reviews .wrap{position:relative;display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:center}
-.reviews .eyebrow{color:#BFE3A9}.reviews .eyebrow::before{background:#BFE3A9}
-.rq{font-family:var(--body);font-weight:500;font-size:clamp(22px,2.4vw,29px);line-height:1.45;margin:20px 0 22px;position:relative;padding-top:38px}
-.rq::before{content:"\201C";font-family:var(--display);position:absolute;top:-18px;left:-4px;font-size:96px;line-height:1;color:#BFE3A9;opacity:.9}
-.rq-by{color:rgba(255,255,255,.75);font-size:16px}
+.reviews::after{content:"";position:absolute;right:-80px;top:-60px;width:420px;height:520px;background:url("assets/fox-mark-white.png") center/contain no-repeat;opacity:.06;pointer-events:none}
+.reviews .wrap{position:relative;display:grid;grid-template-columns:1.25fr .75fr;gap:64px;align-items:center;z-index:1}
+.reviews .eyebrow{color:var(--leaf)}
+.rq{font-family:var(--body);font-weight:500;font-size:clamp(22px,2.4vw,29px);line-height:1.45;margin:20px 0 22px;position:relative;padding-top:40px}
+.rq::before{content:"\201C";font-family:var(--display);position:absolute;top:-16px;left:-4px;font-size:96px;line-height:1;color:var(--leaf)}
+.rq-by{color:rgba(255,255,255,.78);font-size:16px;margin:0}
 .rq-by b{color:#fff}
-.score{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:18px;padding:30px}
-.score .row{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.rq-more{display:inline-flex;gap:8px;align-items:center;margin-top:22px;color:var(--leaf);font-weight:700;text-decoration:none;font-size:16px}
+.rq-more:hover{text-decoration:underline}
+.score{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:18px;padding:12px 28px}
+.score .row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.12)}
 .score .row:last-child{border-bottom:0}
-.score b{font-family:var(--display);font-size:30px;color:#BFE3A9}
-.score span{color:rgba(255,255,255,.8);font-size:15.5px;text-align:right}
-.stars{color:#F2C14E;letter-spacing:3px;font-size:20px}
+.score b{font-family:var(--display);font-size:30px;color:var(--leaf);line-height:1}
+.score span{color:rgba(255,255,255,.82);font-size:15.5px;text-align:right;line-height:1.4}
+.stars{color:#F2C14E;letter-spacing:3px;font-size:18px}
+
+/* ---------- FAQ ---------- */
+.faq .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:start}
+.faq details{border-bottom:1px solid var(--line)}
+.faq details:first-child{border-top:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:18px;padding:22px 2px;font-weight:700;font-size:19px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";flex:none;width:28px;height:28px;border-radius:50%;background:var(--green-pale) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 6v12M6 12h12' stroke='%233E7F25' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E") center/16px no-repeat;transition:transform .2s ease}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{margin:0 0 22px;color:var(--muted);font-size:17.5px;max-width:640px}
 
 /* ---------- Area ---------- */
-.area .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.area{padding-top:0}
+.area-box{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:22px;padding:48px}
+.area h2{font-size:clamp(28px,3.4vw,40px);margin-top:12px}
+.area p{color:var(--muted);margin:14px 0 0}
 .towns{display:flex;flex-wrap:wrap;gap:10px}
-.town{background:#fff;border:1px solid var(--line);border-radius:999px;padding:10px 18px;font-weight:600;font-size:16px}
-.town.home{background:var(--green);border-color:var(--green);color:#fff}
-.area-note{margin-top:20px;color:var(--muted);font-size:16.5px}
+.town{background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:9px 17px;font-weight:600;font-size:16px}
+.town.home{background:var(--green-ink);border-color:var(--green-ink);color:#fff}
+.area-note{margin-top:18px;color:var(--muted);font-size:15.5px}
 
-/* ---------- CTA ---------- */
-.cta{padding:0 0 96px}
-.cta-box{background:linear-gradient(135deg,var(--green-ink),var(--forest));border-radius:26px;color:#fff;padding:60px 52px;display:grid;grid-template-columns:1.3fr .7fr;gap:30px;align-items:center;position:relative;overflow:hidden}
-.cta-box::after{content:"";position:absolute;right:-30px;bottom:-60px;width:300px;height:370px;background:url("assets/fox-mark-white.png") center/contain no-repeat;opacity:.1}
-.cta-box h2{font-size:clamp(32px,4vw,48px)}
-.cta-box p{color:rgba(255,255,255,.85);font-size:19px;margin:14px 0 0;max-width:560px}
-.cta-actions{display:flex;flex-direction:column;gap:12px;position:relative;z-index:1}
-.cta-mail{color:rgba(255,255,255,.8);font-size:15.5px;text-align:center}
-.cta-mail a{color:#fff}
+/* ---------- Quote / text form ---------- */
+.quote{padding:0 0 100px}
+.quote-box{background:linear-gradient(135deg,var(--green-ink),var(--forest));border-radius:26px;color:#fff;padding:56px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;position:relative;overflow:hidden}
+.quote-box::after{content:"";position:absolute;left:-40px;bottom:-70px;width:300px;height:370px;background:url("assets/fox-mark-white.png") center/contain no-repeat;opacity:.08;pointer-events:none}
+.quote-box > *{position:relative;z-index:1}
+.quote-box h2{font-size:clamp(32px,4vw,48px)}
+.quote-box p{color:rgba(255,255,255,.86);font-size:19px;margin:14px 0 0;max-width:500px}
+.quote-alt{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.form{background:#fff;color:var(--ink);border-radius:18px;padding:28px;box-shadow:0 30px 60px -30px rgba(0,0,0,.5)}
+.form h3{font-size:20px;margin-bottom:4px}
+.form .sub{color:var(--muted);font-size:15px;margin:0 0 18px}
+.field{display:block;margin-bottom:14px}
+.field span{display:block;font-weight:700;font-size:14.5px;margin-bottom:6px}
+.field input,.field select,.field textarea{width:100%;font:inherit;font-size:16.5px;color:var(--ink);background:var(--paper);border:1.5px solid var(--line);border-radius:10px;padding:12px 14px;transition:border-color .15s,box-shadow .15s}
+.field textarea{min-height:104px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--green-ink);box-shadow:0 0 0 3px rgba(92,168,60,.2)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.form .btn{width:100%;margin-top:4px}
+.form small{display:block;color:var(--muted);font-size:13.5px;margin-top:12px;line-height:1.45}
 
-/* ---------- Mock site footer ---------- */
+/* ---------- Site footer ---------- */
 .site-foot{border-top:1px solid var(--line);padding:34px 0;font-size:15px;color:var(--muted)}
-.site-foot .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.site-foot .wrap{display:flex;justify-content:space-between;gap:16px 28px;flex-wrap:wrap;align-items:center}
+.site-foot nav{display:flex;gap:18px;flex-wrap:wrap}
 .site-foot a{color:var(--green-ink);font-weight:600}
 
 /* ---------- Sticky Mule band + footer ---------- */
 .sm-band{background:var(--sm-cream);color:var(--sm-ink);border-top:4px solid var(--sm-ink)}
 .sm-band .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-top:44px;padding-bottom:44px;flex-wrap:wrap}
 .sm-band h3{font-family:"Oswald",Impact,sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.04em;font-size:30px;line-height:1.1}
-.sm-band p{margin:8px 0 0;color:#5b4a3a;font-size:17px;max-width:620px}
+.sm-band p{margin:8px 0 0;color:#5b4a3a;font-size:17px;max-width:640px}
 .btn-sm{background:var(--sm-orange);color:#fff}
 .btn-sm:hover{background:#b44f12}
-.sm-foot{background:var(--sm-ink);color:rgba(243,235,221,.72);font-size:14px;padding:22px 0}
+.sm-foot{background:var(--sm-ink);color:rgba(243,235,221,.74);font-size:14px;padding:22px 0}
 .sm-foot .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
 .sm-foot a{color:var(--sm-cream)}
 
 /* ---------- Mobile call bar ---------- */
 .mbar{display:none}
 
-@media (max-width:980px){
-  .hero .wrap,.early .wrap,.reviews .wrap,.area .wrap,.cta-box{grid-template-columns:1fr}
-  .hero-art{max-width:340px;margin-top:10px}
+@media (max-width:1020px){
+  .hero .wrap,.early .wrap,.reviews .wrap,.faq .wrap,.area-box,.quote-box{grid-template-columns:1fr}
+  .hero .wrap{gap:56px}
+  .hero-art{justify-self:center;max-width:420px}
   .services{grid-template-columns:1fr 1fr}
+  .gallery{grid-template-columns:1fr 1fr}
   .steps{grid-template-columns:1fr 1fr;row-gap:30px}
   .proof .wrap{grid-template-columns:1fr 1fr}
-  .stat:nth-child(3){border-left:0}
-  .stat{border-top:1px solid rgba(255,255,255,.14)}
-  .stat:nth-child(-n+2){border-top:0}
+  .stat:nth-child(3){border-left:0;padding-left:0}
+  .stat:nth-child(n+3){border-top:1px solid rgba(255,255,255,.14)}
   .nav-links{display:none}
-  .portrait{max-width:300px}
+  .faq .wrap{gap:28px}
 }
-@media (max-width:620px){
-  body{font-size:17px;padding-bottom:72px}
-  section{padding:70px 0}
-  .hero{padding:44px 0 64px}
-  .services,.steps{grid-template-columns:1fr}
-  .checks{grid-template-columns:1fr}
+@media (max-width:640px){
+  body{font-size:17px;padding-bottom:64px}
+  section{padding:72px 0}
+  .hero{padding:40px 0 76px}
+  .lede{font-size:19px}
+  .services,.steps,.gallery{grid-template-columns:1fr}
+  .featured .ba{aspect-ratio:4/3}
+  .checks,.two{grid-template-columns:1fr}
   .brand b{font-size:19px}
   .brand img{height:38px}
   .nav .btn span{display:none}
   .nav .btn{padding:11px 13px}
-  .cta-box{padding:40px 24px}
-  .cta-box::after{display:none}
+  .hero-before{left:-8px;bottom:-26px;width:48%}
+  .stamp{width:98px;height:98px;font-size:9.5px;right:-6px;top:-16px}
+  .stamp b{font-size:21px}
+  .hero-link{bottom:-40px}
   .stat{padding:22px 14px}
   .stat b{font-size:27px}
-  .stamp{width:96px;height:96px;font-size:10.5px;right:-6px}
-  .stamp b{font-size:21px}
+  .area-box{padding:30px 22px}
+  .quote-box{padding:34px 20px}
+  .form{padding:22px 18px}
   .sm-tag{font-size:11px}
-  .mbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:30;box-shadow:0 -8px 24px -12px rgba(0,0,0,.3)}
-  .mbar a{display:flex;align-items:center;justify-content:center;gap:8px;padding:17px 10px;font-weight:700;text-decoration:none;color:#fff;background:var(--green-ink)}
+  .ba-knob{width:46px;height:46px;margin:-23px 0 0 -23px}
+  .mbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:50;box-shadow:0 -8px 24px -12px rgba(0,0,0,.3)}
+  .mbar a{display:flex;align-items:center;justify-content:center;gap:8px;padding:16px 10px;font-weight:700;text-decoration:none;color:#fff;background:var(--green-ink)}
   .mbar a+a{background:var(--forest)}
   .mbar svg{width:18px;height:18px}
 }
@@ -230,17 +298,18 @@ section{padding:96px 0}
 
 <header class="nav">
   <div class="wrap">
-    <a class="brand" href="#top" aria-label="Foxy Green Home Services">
+    <a class="brand" href="#top" aria-label="Foxy Green Home Services, back to top">
       <img src="assets/fox-mark.png" alt="">
       <span><b>FOXY GREEN</b><small>HOME SERVICES</small></span>
     </a>
     <nav class="nav-links" aria-label="Sections">
+      <a href="#work">Work</a>
       <a href="#services">Services</a>
       <a href="#about">About</a>
       <a href="#reviews">Reviews</a>
-      <a href="#area">Service area</a>
+      <a href="#faq">FAQ</a>
     </nav>
-    <a class="btn btn-green" href="tel:+16155170102">
+    <a class="btn btn-green" href="tel:+16155170102" aria-label="Call (615) 517-0102">
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.2 15.2 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z"/></svg>
       <span>(615) 517-0102</span>
     </a>
@@ -248,80 +317,152 @@ section{padding:96px 0}
 </header>
 
 <main id="top">
-  <section class="hero">
+  <section class="hero" aria-labelledby="hero-h">
     <div class="wrap">
       <div>
         <span class="eyebrow">Franklin · Nashville · Middle Tennessee</span>
-        <h1>Home repairs done right, by a guy who shows up <em>early.</em></h1>
+        <h1 id="hero-h">Home repairs done right, by a guy who shows up <em>early.</em></h1>
         <p class="lede">Kitchens, baths, tile, trim, and the punch list you keep putting off. One owner does every job, start to finish, and you get a clear price for each task before he picks up a tool.</p>
         <div class="cta-row">
           <a class="btn btn-green" href="tel:+16155170102">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.2 15.2 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z"/></svg>
             Call (615) 517-0102
           </a>
-          <a class="btn btn-ghost" href="sms:+16155170102">
+          <a class="btn btn-ghost" href="#quote">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12a8 8 0 01-11.6 7.1L4 20.5l1.4-4.9A8 8 0 1121 12z"/></svg>
             Text a photo of the job
           </a>
         </div>
         <p class="hero-note"><b>Call or text 24/7.</b> Send a picture and a sentence. You hear back fast.</p>
       </div>
-      <div class="hero-art" aria-hidden="true">
-        <div class="hero-card">
-          <img src="assets/fox-mark.png" alt="">
-          <div class="wm">FOXY GREEN</div>
-          <div class="rule"><span>HOME SERVICES</span></div>
-          <div class="phone">(615) 517-0102</div>
+      <div class="hero-art">
+        <div class="hero-photo">
+          <img src="assets/work/hero-after.webp" alt="A finished kitchen with white shaker cabinets, a tile backsplash, and a stainless range" width="920" height="1069" fetchpriority="high">
+          <span class="pill-tag">After</span>
         </div>
-        <div class="stamp"><div><b>100%</b>RECOMMEND<br>ON FACEBOOK</div></div>
+        <div class="hero-before">
+          <img src="assets/work/hero-before.webp" alt="The same style of kitchen before: dated oak cabinets and a checkered vinyl floor" width="440" height="330">
+          <span>BEFORE</span>
+        </div>
+        <div class="stamp" aria-hidden="true"><div><b>100%</b>RECOMMEND<br>ON FACEBOOK</div></div>
+        <a class="hero-link" href="#work">See the work <span aria-hidden="true">→</span></a>
       </div>
     </div>
   </section>
 
-  <div class="proof">
+  <div class="proof grain">
     <div class="wrap">
       <div class="stat"><b>100%</b><span>recommend him on Facebook, 15 reviews</span></div>
       <div class="stat"><b>5.0</b><span>stars on Yelp</span></div>
       <div class="stat"><b>24/7</b><span>call or text, nights and weekends included</span></div>
-      <div class="stat"><b>Licensed</b><span>in Williamson County</span></div>
+      <div class="stat"><b>Licensed</b><span>business in Williamson County</span></div>
     </div>
   </div>
 
-  <section id="services">
+  <section class="work" id="work" aria-labelledby="work-h">
+    <div class="wrap">
+      <div class="sec-row">
+        <div class="sec-head">
+          <span class="eyebrow">Recent work</span>
+          <h2 id="work-h">Drag the handle. See the difference.</h2>
+          <p>Same care on a full gut job or a single wall of tile.</p>
+        </div>
+        <span class="concept"><i></i><span><b>Concept note</b> · Sample photos. Foxy Green's own before and after shots go here.</span></span>
+      </div>
+
+      <div class="gallery">
+        <figure class="project featured">
+          <div class="ba">
+            <img src="assets/work/kitchen-after.webp" alt="After: white shaker cabinets, subway tile backsplash, wood floor" width="1600" height="900" loading="lazy">
+            <img class="ba-before" src="assets/work/kitchen-before.webp" alt="Before: dated oak cabinets and checkered vinyl floor" width="1600" height="900" loading="lazy">
+            <span class="ba-label b">Before</span><span class="ba-label a">After</span>
+            <span class="ba-line"></span>
+            <span class="ba-knob"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg></span>
+            <span class="ba-hint">Drag to compare</span>
+            <input type="range" min="0" max="100" value="50" aria-label="Kitchen before and after. Use arrow keys to compare.">
+          </div>
+          <figcaption><b>Kitchen refresh</b><span>Cabinets, hardware, backsplash, flooring</span></figcaption>
+        </figure>
+
+        <figure class="project">
+          <div class="ba">
+            <img src="assets/work/bath-after.webp" alt="After: white tile walk-in shower with glass door and a new vanity" width="960" height="720" loading="lazy">
+            <img class="ba-before" src="assets/work/bath-before.webp" alt="Before: blue tile bathroom with a wall-hung sink" width="960" height="720" loading="lazy">
+            <span class="ba-label b">Before</span><span class="ba-label a">After</span>
+            <span class="ba-line"></span>
+            <span class="ba-knob"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg></span>
+            <input type="range" min="0" max="100" value="50" aria-label="Bathroom before and after. Use arrow keys to compare.">
+          </div>
+          <figcaption><b>Full bathroom</b><span>Tile, shower glass, vanity</span></figcaption>
+        </figure>
+
+        <figure class="project">
+          <div class="ba">
+            <img src="assets/work/halfbath-after.webp" alt="After: wood vanity, vessel sink, and new toilet" width="960" height="720" loading="lazy">
+            <img class="ba-before" src="assets/work/halfbath-before.webp" alt="Before: dated tile and a pedestal sink" width="960" height="720" loading="lazy">
+            <span class="ba-label b">Before</span><span class="ba-label a">After</span>
+            <span class="ba-line"></span>
+            <span class="ba-knob"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg></span>
+            <input type="range" min="0" max="100" value="50" aria-label="Half bath before and after. Use arrow keys to compare.">
+          </div>
+          <figcaption><b>Half bath</b><span>Vanity, fixtures, paint</span></figcaption>
+        </figure>
+
+        <figure class="project">
+          <div class="ba">
+            <img src="assets/work/backsplash-after.webp" alt="After: gray cabinets with a white subway tile backsplash" width="960" height="720" loading="lazy">
+            <img class="ba-before" src="assets/work/backsplash-before.webp" alt="Before: floral wallpaper and cream cabinets" width="960" height="720" loading="lazy">
+            <span class="ba-label b">Before</span><span class="ba-label a">After</span>
+            <span class="ba-line"></span>
+            <span class="ba-knob"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg></span>
+            <input type="range" min="0" max="100" value="50" aria-label="Backsplash before and after. Use arrow keys to compare.">
+          </div>
+          <figcaption><b>Backsplash and paint</b><span>Subway tile, cabinet paint</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="gallery-foot">
+        <span>More projects on <a href="https://www.facebook.com/profile.php?id=61587812030335">Facebook</a> and <a href="https://www.instagram.com/foxygreen615/">Instagram</a>.</span>
+        <a class="btn btn-ghost" href="#quote">Start your project</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" aria-labelledby="svc-h">
     <div class="wrap">
       <div class="sec-head">
         <span class="eyebrow">What he does</span>
-        <h2>Big remodels and small fixes get the same care.</h2>
-        <p>Every job gets the same standard, whether you need a full bathroom gutted or a TV hung straight on the first try.</p>
+        <h2 id="svc-h">Big remodels and small fixes get the same care.</h2>
+        <p>A full bathroom gutted to the studs, or a TV hung straight on the first try. Same standard either way.</p>
       </div>
       <div class="services">
         <article class="svc">
-          <div class="ico"><svg viewBox="0 0 24 24"><path d="M4 12h16v3a4 4 0 01-4 4H8a4 4 0 01-4-4v-3z"/><path d="M6 12V6a2 2 0 014 0"/><path d="M8 19l-1 2M16 19l1 2"/></svg></div>
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16v3a4 4 0 01-4 4H8a4 4 0 01-4-4v-3z"/><path d="M6 12V6a2 2 0 014 0"/><path d="M8 19l-1 2M16 19l1 2"/></svg></div>
           <h3>Bathroom renovations</h3>
           <p>Tear out to final caulk line. New tile, vanities, fixtures, and trim, done by one set of hands.</p>
         </article>
         <article class="svc">
-          <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="1.5"/><path d="M3 10h18M9 4v6M8 14h3M14 14h2"/></svg></div>
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"/><path d="M3 10h18M9 4v6M8 14h3M14 14h2"/></svg></div>
           <h3>Kitchen updates</h3>
           <p>Cabinet installs, new hardware, backsplash, and fixture swaps that make an old kitchen look current.</p>
         </article>
         <article class="svc">
-          <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8"/><rect x="13" y="3" width="8" height="8"/><rect x="3" y="13" width="8" height="8"/><rect x="13" y="13" width="8" height="8"/></svg></div>
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="8" height="8"/><rect x="13" y="3" width="8" height="8"/><rect x="3" y="13" width="8" height="8"/><rect x="13" y="13" width="8" height="8"/></svg></div>
           <h3>Tile and backsplash</h3>
           <p>Floors, showers, fireplace surrounds, and backsplashes, laid out so the cuts land where nobody looks.</p>
         </article>
         <article class="svc">
-          <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l7-5 7 5v12"/><path d="M9 21v-6h6v6"/></svg></div>
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M5 21V9l7-5 7 5v12"/><path d="M9 21v-6h6v6"/></svg></div>
           <h3>Flooring</h3>
           <p>New floors installed level, with clean transitions between rooms and trim set back in place.</p>
         </article>
         <article class="svc">
-          <div class="ico"><svg viewBox="0 0 24 24"><path d="M14 4l6 6-9.5 9.5H4.5v-6z"/><path d="M12 6l6 6"/></svg></div>
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4l6 6-9.5 9.5H4.5v-6z"/><path d="M12 6l6 6"/></svg></div>
           <h3>Trim and carpentry</h3>
           <p>Baseboards, crown, door casing, and custom woodwork. Tight miters, filled nail holes, clean paint lines.</p>
         </article>
         <article class="svc">
-          <div class="ico"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 00-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 005.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg></div>
+          <div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a4 4 0 00-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 005.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg></div>
           <h3>Repairs and the punch list</h3>
           <p>Light fixtures, TV mounts, furniture assembly, sticking doors, and the small stuff on your list.</p>
         </article>
@@ -330,17 +471,17 @@ section{padding:96px 0}
     </div>
   </section>
 
-  <section class="early" id="about">
+  <section class="early" id="about" aria-labelledby="about-h">
     <div class="wrap">
       <figure class="portrait">
-        <img src="assets/owner.jpg" alt="The owner of Foxy Green Home Services with his dalmatian">
+        <img src="assets/owner.jpg" alt="The owner of Foxy Green Home Services with his dalmatian" width="390" height="436" loading="lazy">
         <figcaption>The owner and his co-pilot</figcaption>
       </figure>
       <div>
-        <span class="eyebrow">Who shows up</span>
+        <span class="eyebrow" id="about-h">Who shows up</span>
         <p class="big-quote">“If you’re not early, you’re late.”</p>
         <p>Foxy Green is a one-man operation. The person you talk to on the phone is the person who walks into your house and does the work. No crews you have never met. No subcontractor roulette.</p>
-        <p>He holds himself to a standard most people would call fussy. <b>Two minutes late to a 2:00 appointment bothers him for weeks.</b> That same attitude goes into every grout line and every miter.</p>
+        <p>He holds himself to a standard most people would call fussy. <b>Two minutes late to a 2:00 appointment bothers him for weeks.</b> The same attitude goes into every grout line and every miter.</p>
         <ul class="checks">
           <li>Licensed business</li>
           <li>Owner on every job</li>
@@ -351,74 +492,116 @@ section{padding:96px 0}
     </div>
   </section>
 
-  <section id="how">
+  <section id="how" aria-labelledby="how-h">
     <div class="wrap">
       <div class="sec-head">
         <span class="eyebrow">How it works</span>
-        <h2>Four steps. No runaround.</h2>
+        <h2 id="how-h">Four steps. No runaround.</h2>
       </div>
-      <div class="steps">
-        <div class="step"><h3>Call or text</h3><p>Describe the job or send a few photos. Day or night.</p></div>
-        <div class="step"><h3>Get a price</h3><p>Each task priced on its own, so you decide what goes on the list.</p></div>
-        <div class="step"><h3>He shows up</h3><p>On time, which for Foxy Green means a few minutes early.</p></div>
-        <div class="step"><h3>Job done</h3><p>Finished the way it was quoted, by the same person who quoted it.</p></div>
-      </div>
+      <ol class="steps">
+        <li class="step"><h3>Call or text</h3><p>Describe the job or send a few photos. Day or night.</p></li>
+        <li class="step"><h3>Get a price</h3><p>Each task priced on its own, so you decide what goes on the list.</p></li>
+        <li class="step"><h3>He shows up</h3><p>On time, which for Foxy Green means a few minutes early.</p></li>
+        <li class="step"><h3>Job done</h3><p>Finished the way it was quoted, by the same person who quoted it.</p></li>
+      </ol>
     </div>
   </section>
 
-  <section class="reviews" id="reviews">
+  <section class="reviews grain" id="reviews" aria-labelledby="rev-h">
     <div class="wrap">
       <div>
-        <span class="eyebrow">What customers say</span>
+        <span class="eyebrow" id="rev-h">What customers say</span>
         <p class="rq">Such a great experience using Foxy Green Home Services. I will absolutely use them again for any future home needs. He was responsive, quick, and did an excellent job with all of our requests.</p>
         <p class="rq-by"><b>Whitney L.</b> · Yelp review</p>
-        <!-- Concept note: rotate in his Facebook reviews here once he picks his favorites -->
+        <a class="rq-more" href="https://www.facebook.com/profile.php?id=61587812030335&amp;sk=reviews">Read all 15 reviews on Facebook <span aria-hidden="true">→</span></a>
       </div>
       <div class="score">
         <div class="row"><b>100%</b><span>Facebook recommend rate<br>15 reviews</span></div>
-        <div class="row"><b>5.0</b><span><span class="stars">★★★★★</span><br>Yelp rating</span></div>
+        <div class="row"><b>5.0</b><span><span class="stars" aria-hidden="true">★★★★★</span><br>Yelp rating</span></div>
         <div class="row"><b>907</b><span>Facebook followers</span></div>
       </div>
     </div>
   </section>
 
-  <section class="area" id="area">
+  <section class="faq" id="faq" aria-labelledby="faq-h">
     <div class="wrap">
-      <div class="sec-head" style="margin-bottom:0">
-        <span class="eyebrow">Service area</span>
-        <h2>Based in Franklin. Working all over Middle Tennessee.</h2>
-        <p>Your town is not on the list? Call and ask.</p>
+      <div class="sec-head">
+        <span class="eyebrow">Questions</span>
+        <h2 id="faq-h">Straight answers.</h2>
+        <p>Anything else, text (615) 517-0102.</p>
       </div>
       <div>
-        <div class="towns">
-          <span class="town home">Franklin</span>
-          <span class="town">Brentwood</span>
-          <span class="town">Nashville</span>
-          <span class="town">Spring Hill</span>
-          <span class="town">Columbia</span>
-          <span class="town">Fairview</span>
-          <span class="town">Murfreesboro</span>
-          <span class="town">Smyrna</span>
-          <span class="town">Eagleville</span>
-          <span class="town">Chapel Hill</span>
-        </div>
-        <p class="area-note">Williamson, Davidson, Maury, Rutherford, and Marshall counties.</p>
+        <details open>
+          <summary>Do you take small jobs?</summary>
+          <p>Yes. TV mounts, furniture assembly, a door that sticks, a light fixture swap. Put a few small items on one list and you get a price for each.</p>
+        </details>
+        <details>
+          <summary>How does pricing work?</summary>
+          <p>Every task gets its own price. You see the list before any work starts and decide what stays on it. No open-ended hourly bill.</p>
+        </details>
+        <details>
+          <summary>Who does the work?</summary>
+          <p>The owner. Foxy Green is a one-man operation, so the person who quotes your job is the person who shows up to do it.</p>
+        </details>
+        <details>
+          <summary>Are you licensed?</summary>
+          <p>Yes. Foxy Green Home Services holds a business license in Williamson County.</p>
+        </details>
+        <details>
+          <summary>What areas do you cover?</summary>
+          <p>Franklin, Brentwood, Nashville, Spring Hill, Columbia, Fairview, Murfreesboro, Smyrna, Eagleville, and Chapel Hill. Outside those towns? Ask.</p>
+        </details>
       </div>
     </div>
   </section>
 
-  <div class="cta">
+  <section class="area" id="area" aria-labelledby="area-h">
     <div class="wrap">
-      <div class="cta-box">
+      <div class="area-box">
+        <div>
+          <span class="eyebrow">Service area</span>
+          <h2 id="area-h">Based in Franklin. Working all over Middle Tennessee.</h2>
+          <p>Your town is not on the list? Call and ask.</p>
+        </div>
+        <div>
+          <div class="towns">
+            <span class="town home">Franklin</span><span class="town">Brentwood</span><span class="town">Nashville</span><span class="town">Spring Hill</span><span class="town">Columbia</span><span class="town">Fairview</span><span class="town">Murfreesboro</span><span class="town">Smyrna</span><span class="town">Eagleville</span><span class="town">Chapel Hill</span>
+          </div>
+          <p class="area-note">Williamson, Davidson, Maury, Rutherford, and Marshall counties.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="quote" id="quote">
+    <div class="wrap">
+      <div class="quote-box">
         <div>
           <h2>Got a list? Send it over.</h2>
-          <p>Text a photo of the job to (615) 517-0102. You get a straight answer and a price for each task.</p>
+          <p>Fill this in and your phone opens a text to Foxy Green with the details ready. Attach a photo or two and hit send. You get a straight answer and a price for each task.</p>
+          <div class="quote-alt">
+            <a class="btn btn-white" href="tel:+16155170102">Call (615) 517-0102</a>
+            <a class="btn btn-line" href="mailto:foxygreen615@gmail.com">Email instead</a>
+          </div>
         </div>
-        <div class="cta-actions">
-          <a class="btn btn-white" href="tel:+16155170102">Call (615) 517-0102</a>
-          <a class="btn btn-line" href="sms:+16155170102">Send a text</a>
-          <div class="cta-mail">or email <a href="mailto:foxygreen615@gmail.com">foxygreen615@gmail.com</a></div>
-        </div>
+        <form class="form" id="textForm" novalidate>
+          <h3>Text your project</h3>
+          <p class="sub">Takes about 30 seconds.</p>
+          <div class="two">
+            <label class="field"><span>Your name</span><input name="name" autocomplete="given-name" placeholder="First name"></label>
+            <label class="field"><span>Town</span>
+              <select name="town">
+                <option>Franklin</option><option>Brentwood</option><option>Nashville</option><option>Spring Hill</option><option>Columbia</option><option>Fairview</option><option>Murfreesboro</option><option>Smyrna</option><option>Eagleville</option><option>Chapel Hill</option><option>Somewhere else</option>
+              </select>
+            </label>
+          </div>
+          <label class="field"><span>What needs doing?</span><textarea name="job" placeholder="Example: regrout the shower, hang two TVs, replace the bathroom vanity"></textarea></label>
+          <button class="btn btn-green" type="submit">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12a8 8 0 01-11.6 7.1L4 20.5l1.4-4.9A8 8 0 1121 12z"/></svg>
+            Open a text to Foxy Green
+          </button>
+          <small id="formHelp">Opens the texting app on your phone. On a computer, call or email instead.</small>
+        </form>
       </div>
     </div>
   </div>
@@ -426,6 +609,10 @@ section{padding:96px 0}
   <footer class="site-foot">
     <div class="wrap">
       <span>© 2026 Foxy Green Home Services · Franklin, Tennessee · Licensed in Williamson County</span>
+      <nav aria-label="Social">
+        <a href="https://www.facebook.com/profile.php?id=61587812030335">Facebook</a>
+        <a href="https://www.instagram.com/foxygreen615/">Instagram</a>
+      </nav>
       <span>Site by <a href="https://stickymule.com/?utm_source=foxygreen-concept&amp;utm_medium=pitch">Sticky Mule</a></span>
     </div>
   </footer>
@@ -435,14 +622,14 @@ section{padding:96px 0}
   <div class="wrap">
     <div>
       <h3>Made in Columbia by Sticky Mule</h3>
-      <p>This is a concept we built on spec for Foxy Green Home Services. It is hidden from Google and is not his official website.</p>
+      <p>This is a concept we built on spec for Foxy Green Home Services. It is hidden from Google and is not his official website. Gallery photos are samples from Unsplash.</p>
     </div>
     <a class="btn btn-sm" href="https://stickymule.com/?utm_source=foxygreen-concept&amp;utm_medium=pitch">Visit Sticky Mule</a>
   </div>
 </div>
 <div class="sm-foot">
   <div class="wrap">
-    <span>The Foxy Green name, logo, photo, and reviews belong to Foxy Green Home Services. Concept design by Sticky Mule.</span>
+    <span>The Foxy Green name, logo, owner photo, and reviews belong to Foxy Green Home Services. Concept design by Sticky Mule.</span>
     <a href="https://stickymule.com/?utm_source=foxygreen-concept&amp;utm_medium=pitch">stickymule.com</a>
   </div>
 </div>
@@ -451,5 +638,70 @@ section{padding:96px 0}
   <a href="tel:+16155170102"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.2 15.2 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z"/></svg>Call</a>
   <a href="sms:+16155170102"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12a8 8 0 01-11.6 7.1L4 20.5l1.4-4.9A8 8 0 1121 12z"/></svg>Text</a>
 </nav>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Before / after sliders: pointer drag on the photo, arrow keys through the hidden range input
+  document.querySelectorAll('.ba').forEach(function(el){
+    var range = el.querySelector('input');
+    var labelB = el.querySelector('.ba-label.b'), labelA = el.querySelector('.ba-label.a');
+    function set(v){
+      v = Math.max(0, Math.min(100, v));
+      el.style.setProperty('--pos', v + '%');
+      range.value = Math.round(v);
+      range.setAttribute('aria-valuetext', Math.round(v) + ' percent before');
+      if (labelB) labelB.style.opacity = v < 14 ? 0 : 1;
+      if (labelA) labelA.style.opacity = v > 86 ? 0 : 1;
+    }
+    function fromEvent(e){ var b = el.getBoundingClientRect(); return (e.clientX - b.left) / b.width * 100; }
+    var dragging = false;
+    el.addEventListener('pointerdown', function(e){
+      dragging = true; el.classList.add('is-drag', 'touched');
+      try { el.setPointerCapture(e.pointerId); } catch(_) {}
+      set(fromEvent(e));
+    });
+    el.addEventListener('pointermove', function(e){ if (dragging) set(fromEvent(e)); });
+    ['pointerup','pointercancel','lostpointercapture'].forEach(function(t){
+      el.addEventListener(t, function(){ dragging = false; el.classList.remove('is-drag'); });
+    });
+    el.addEventListener('click', function(){ range.focus({preventScroll:true}); });
+    range.addEventListener('input', function(){ el.classList.add('touched'); set(+range.value); });
+    set(50);
+
+    // One gentle sweep the first time a slider scrolls into view, so people see it moves
+    if (!reduce && 'IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(en){
+          if (!en.isIntersecting || el.classList.contains('touched')) return;
+          io.disconnect();
+          var t0 = null, dur = 1600;
+          function step(ts){
+            if (el.classList.contains('touched')) return;
+            if (t0 === null) t0 = ts;
+            var p = Math.min(1, (ts - t0) / dur);
+            set(50 + Math.sin(p * Math.PI * 2) * 18 * (1 - p));
+            if (p < 1) requestAnimationFrame(step); else set(50);
+          }
+          setTimeout(function(){ requestAnimationFrame(step); }, 250);
+        });
+      }, { threshold: 0.6 });
+      io.observe(el);
+    }
+  });
+
+  // Text-a-job form: builds an sms: link with the details filled in. No server needed.
+  var form = document.getElementById('textForm');
+  if (form) form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = form.name.value.trim(), town = form.town.value, job = form.job.value.trim();
+    var msg = 'Hi Foxy Green, ' + (name ? 'this is ' + name + ' ' : '') + 'in ' + town + '. ' + (job ? 'I need help with: ' + job : 'I have a project I would like a price on.');
+    var url = 'sms:+16155170102?&body=' + encodeURIComponent(msg);
+    form.setAttribute('data-sms', url);
+    window.location.href = url;
+  });
+})();
+</script>
 </body>
 </html>
