@@ -15,11 +15,13 @@
 :root{
   --green:#5CA83C; --green-ink:#3E7F25; --green-pale:#EEF6E8; --forest:#1F3A17; --forest-2:#16290f; --leaf:#BFE3A9;
   --plum:#5B2D73; --plum-soft:#EFE7F3;
+  --brass:#C08A1E; --brass-ink:#7A5410; --brass-lt:#E3B655; --honey:#F3E1B4; --honey-line:#E2C98C;
   --paper:#FAF8F3; --card:#FFFFFF; --ink:#1C211B; --muted:#58614F; --line:#E3DED3;
   --sm-ink:#1F1B17; --sm-cream:#F3EBDD; --sm-orange:#D2601A;
   --display:"Cinzel", "Trajan Pro", Georgia, serif;
   --body:"Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
   --radius:16px;
+  --fox:url("assets/fox-mark-white.png");
   --shadow:0 30px 60px -32px rgba(31,58,23,.45);
 }
 *{box-sizing:border-box}
@@ -95,7 +97,7 @@ h1 em{font-style:normal;color:var(--green-ink)}
 .proof .wrap{position:relative;display:grid;grid-template-columns:repeat(4,1fr)}
 .stat{padding:30px 22px;border-left:1px solid rgba(255,255,255,.14)}
 .stat:first-child{border-left:0;padding-left:0}
-.stat b{display:block;font-family:var(--display);font-size:34px;font-weight:600;line-height:1.1;color:var(--leaf)}
+.stat b{display:block;font-family:var(--display);font-size:34px;font-weight:600;line-height:1.1;color:var(--brass-lt)}
 .stat span{font-size:15.5px;color:rgba(255,255,255,.84)}
 
 /* ---------- Sections ---------- */
@@ -165,22 +167,22 @@ section{padding:100px 0}
 .step p{margin:0;color:var(--muted);font-size:16.5px}
 
 /* ---------- Reviews ---------- */
-.reviews{background:var(--forest);color:#fff;position:relative;overflow:hidden}
-.reviews::after{content:"";position:absolute;right:-80px;top:-60px;width:420px;height:520px;background:url("assets/fox-mark-white.png") center/contain no-repeat;opacity:.06;pointer-events:none}
+.reviews{background:var(--honey);color:var(--ink);position:relative;overflow:hidden;border-top:1px solid var(--honey-line);border-bottom:1px solid var(--honey-line)}
+.reviews::after{content:"";position:absolute;right:-80px;top:-60px;width:420px;height:520px;background:var(--brass);-webkit-mask:var(--fox) center/contain no-repeat;mask:var(--fox) center/contain no-repeat;opacity:.16;pointer-events:none}
 .reviews .wrap{position:relative;display:grid;grid-template-columns:1.25fr .75fr;gap:64px;align-items:center;z-index:1}
-.reviews .eyebrow{color:var(--leaf)}
+.reviews .eyebrow{color:var(--brass-ink)}
 .rq{font-family:var(--body);font-weight:500;font-size:clamp(22px,2.4vw,29px);line-height:1.45;margin:20px 0 22px;position:relative;padding-top:40px}
-.rq::before{content:"\201C";font-family:var(--display);position:absolute;top:-16px;left:-4px;font-size:96px;line-height:1;color:var(--leaf)}
-.rq-by{color:rgba(255,255,255,.78);font-size:16px;margin:0}
-.rq-by b{color:#fff}
-.rq-more{display:inline-flex;gap:8px;align-items:center;margin-top:22px;color:var(--leaf);font-weight:700;text-decoration:none;font-size:16px}
+.rq::before{content:"\201C";font-family:var(--display);position:absolute;top:-16px;left:-4px;font-size:96px;line-height:1;color:var(--brass)}
+.rq-by{color:var(--muted);font-size:16px;margin:0}
+.rq-by b{color:var(--ink)}
+.rq-more{display:inline-flex;gap:8px;align-items:center;margin-top:22px;color:var(--brass-ink);font-weight:700;text-decoration:none;font-size:16px}
 .rq-more:hover{text-decoration:underline}
-.score{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:18px;padding:12px 28px}
-.score .row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.score{background:#fff;border:1px solid var(--honey-line);border-radius:18px;padding:12px 28px;box-shadow:0 26px 50px -34px rgba(122,84,16,.55)}
+.score .row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 0;border-bottom:1px solid #F0E4C8}
 .score .row:last-child{border-bottom:0}
-.score b{font-family:var(--display);font-size:30px;color:var(--leaf);line-height:1}
-.score span{color:rgba(255,255,255,.82);font-size:15.5px;text-align:right;line-height:1.4}
-.stars{color:#F2C14E;letter-spacing:3px;font-size:18px}
+.score b{font-family:var(--display);font-size:30px;color:var(--brass-ink);line-height:1}
+.score span{color:var(--muted);font-size:15.5px;text-align:right;line-height:1.4}
+.score .stars{color:var(--brass);letter-spacing:3px;font-size:19px}
 
 /* ---------- FAQ ---------- */
 .faq .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:start}
@@ -205,7 +207,7 @@ section{padding:100px 0}
 /* ---------- Quote / text form ---------- */
 .quote{padding:0 0 100px}
 .quote-box{background:linear-gradient(135deg,var(--green-ink),var(--forest));border-radius:26px;color:#fff;padding:56px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;position:relative;overflow:hidden}
-.quote-box::after{content:"";position:absolute;left:-40px;bottom:-70px;width:300px;height:370px;background:url("assets/fox-mark-white.png") center/contain no-repeat;opacity:.08;pointer-events:none}
+.quote-box::after{content:"";position:absolute;left:-40px;bottom:-70px;width:300px;height:370px;background:var(--fox) center/contain no-repeat;opacity:.08;pointer-events:none}
 .quote-box > *{position:relative;z-index:1}
 .quote-box h2{font-size:clamp(32px,4vw,48px)}
 .quote-box p{color:rgba(255,255,255,.86);font-size:19px;margin:14px 0 0;max-width:500px}
@@ -507,7 +509,7 @@ section{padding:100px 0}
     </div>
   </section>
 
-  <section class="reviews grain" id="reviews" aria-labelledby="rev-h">
+  <section class="reviews" id="reviews" aria-labelledby="rev-h">
     <div class="wrap">
       <div>
         <span class="eyebrow" id="rev-h">What customers say</span>
